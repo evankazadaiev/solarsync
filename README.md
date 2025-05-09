@@ -56,6 +56,17 @@ This is a demo/prototype build with the following constraints:
 
 ---
 
+## 📁 Project structure
+```markdown
+src/
+├── common/             # Shared types, UI components, utilities
+├── features/
+│   └── notes/       # Field note logic, forms, nested UI
+├── sync/               # (WIP) Sync engine for remote API integration
+├── App.tsx             # Entry point
+```
+---
+
 ## 🏗️ Tech Stack
 
 - **React + TypeScript**
@@ -65,18 +76,6 @@ This is a demo/prototype build with the following constraints:
 - **Vitest + Testing Library**
 - **Leaflet + OpenStreetMap**
 - **VitePWA plugin**
-
----
-
-## 📁 Project structure
-```markdown
-src/
-├── common/             # Shared types, UI components, utilities
-├── features/
-│   └── comments/       # Field note logic, forms, nested UI
-├── sync/               # (WIP) Sync engine for remote API integration
-├── App.tsx             # Entry point
-```
 
 ---
 
