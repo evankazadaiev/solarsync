@@ -1,4 +1,4 @@
-import { renderHook, act } from '@testing-library/react-hooks';
+import { renderHook, act } from '@testing-library/react';
 import { useFieldNotes } from '../useFieldNotes';
 import { vi, describe, it, expect, beforeEach } from 'vitest';
 import { useLiveQuery } from 'dexie-react-hooks';
