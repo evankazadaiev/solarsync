@@ -12,7 +12,8 @@
     "test:ui": "vitest --ui",
     "test:watch": "vitest --watch",
     "start": "serve -s dist",
-    "postinstall": "vite build"
+    "postinstall": "vite build",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@faker-js/faker": "^9.7.0",
