@@ -5,6 +5,14 @@
 > ⚠️ This is a **conceptual demo**, built to showcase clean architecture, local-first principles, and scalability. The app is currently scoped to field noting for **one report**.
 
 ---
+🌐 **[Live Demo](https://solarsync-ee16d33ed3e6.herokuapp.com/)**
+
+<div align="left">
+  <img src="https://github.com/user-attachments/assets/d7a959f5-c808-44dc-82e0-185256464cc4" height="430" />
+  <img src="https://github.com/user-attachments/assets/4ac8c4f0-0139-40f2-a793-e6bda67a2b46" height="430" />
+</div>
+
+---
 
 ## 🌍 What is SolarSync?
 
@@ -71,7 +79,7 @@ This is a demo/prototype build with the following constraints:
 
 - 📝 **Single report scope** — the app assumes one predefined report for now
 - 🚫 **No real backend** — everything is stored locally in the browser
-- 🔄 **Sync logic is stubbed** — `syncUp` / `syncDown` methods exist but don’t communicate with a backend yet
+- 🔄 **Sync logic is in progress** — `syncUp` / `syncDown` methods will be implemented to communicate with a backend
 - 🔐 **No auth/users** — everyone is a fake technician with mock avatars
 - 🧷 **No media support** — you can’t attach files, photos, or audio notes
 - 🧪 **Only unit tests** — no E2E tests or visual testing yet
