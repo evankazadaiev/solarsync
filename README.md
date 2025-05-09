@@ -8,8 +8,8 @@
 🌐 **[Live Demo](https://solarsync-ee16d33ed3e6.herokuapp.com/)**
 
 <div align="left">
-  <img src="https://github.com/user-attachments/assets/d7a959f5-c808-44dc-82e0-185256464cc4" height="390" />
-  <img src="https://github.com/user-attachments/assets/4ac8c4f0-0139-40f2-a793-e6bda67a2b46" height="390" />
+  <img src="https://github.com/user-attachments/assets/d7a959f5-c808-44dc-82e0-185256464cc4" height="310" />
+  <img src="https://github.com/user-attachments/assets/4ac8c4f0-0139-40f2-a793-e6bda67a2b46" height="310" />
 </div>
 
 ---
