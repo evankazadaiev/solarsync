@@ -10,7 +10,9 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "test:watch": "vitest --watch"
+    "test:watch": "vitest --watch",
+    "start": "serve -s dist",
+    "postinstall": "vite build"
   },
   "dependencies": {
     "@faker-js/faker": "^9.7.0",
