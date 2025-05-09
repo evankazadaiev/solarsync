@@ -1,5 +1,5 @@
 import type {FieldNote} from '@/common/domain/fieldNote.ts';
-import {FieldNoteItem} from "@/features/comments/presentation/ui/FieldNoteItem.tsx";
+import {FieldNoteItem} from "@/features/notes/presentation/ui/FieldNoteItem.tsx";
 
 type Props = {
     notes: FieldNote[];

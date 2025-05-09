@@ -1,80 +1,101 @@
-# React + TypeScript + Vite
+# ☀️ SolarSync
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**SolarSync** is a **demo project**, built using offline-first application architecture. It simulates a field reporting tool for solar panel technicians - focused on logging comments, observations, and map-based data tied to a single report.
 
-Currently, two official plugins are available:
+> ⚠️ This is a **conceptual demo**, built to showcase clean architecture, local-first principles, and scalability. The app is currently scoped to field noting for **one report**.
 
+---
+
+## 🌍 What is SolarSync?
+
+SolarSync is a **PWA** designed for technicians who may be working in remote areas with poor or no internet connectivity. It enables:
+- Logging field observations
+- Commenting and threaded replies
+- Syncing data later when online
+
+It lays the groundwork for **future multi-report support**, multi-user conflict handling, and real-world deployments.
+
+---
+
+## 🔧 Key Features
+
+### ✅ Offline-First Field Notes
+- Works fully offline - try turning off Wi-Fi and reloading!
+- Uses IndexedDB via `Dexie.js` for local persistence
+- Cached tiles and markers (Leaflet/OpenStreetMap)
+- Nested threaded comments
+
+### 💡 Smart Local-first Architecture
+- Notes are created, updated, and read locally
+- Each note includes `synced` and `updatedAt` fields
+- Multi-tab notes sync
+- Sync engine (WIP) will support conflict resolution patterns
+
+### ⚡ PWA Capabilities
+- Installable on desktop & mobile
+- Service worker handles background caching
+
+### 🧪 Fully Testable & Maintainable
+- Powered by **Vitest** + **React Testing Library**
+- Domain-oriented file structure for clear separation
+
+---
+
+## 🏗️ Tech Stack
+
+- **React + TypeScript**
+- **Vite + SWC**
+- **TailwindCSS**
+- **IndexedDB via Dexie.js**
+- **Vitest + Testing Library**
+- **Leaflet + OpenStreetMap**
+- **VitePWA plugin**
+
+---
+
+## 📁 Project structure
 ```markdown
-/src
-  /features
-    /comments
-      /data             # Dexie schema, repo (persistence only)
-        db.ts
-        commentsRepo.ts
-      /domain           # Pure domain logic, types, no React
-        fieldNote.ts      # Entity, factories, value objects
-        commentService.ts  # Use cases (add, delete, nest, etc.)
-      /ui               # React components only
-        CommentList.tsx
-        CommentForm.tsx
-        useFieldNotes.ts  # Feature-specific hooks (calls service layer)
-  /shared
-    /db                 # Dexie instance setup
-    /lib                # Utilities, helpers
-    /types              # Global types if needed
-    /infra              # Cross-cutting infra (PWA, BroadcastChannel, etc.)
-  /app
-    App.tsx
-    main.tsx
-    routes.tsx
-
+src/
+├── common/             # Shared types, UI components, utilities
+├── features/
+│   └── comments/       # Field note logic, forms, nested UI
+├── sync/               # (WIP) Sync engine for remote API integration
+├── App.tsx             # Entry point
 ```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚧 Current Limitations
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This is a demo/prototype build with the following constraints:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- 📝 **Single report scope** — the app assumes one predefined report for now
+- 🚫 **No real backend** — everything is stored locally in the browser
+- 🔄 **Sync logic is stubbed** — `syncUp` / `syncDown` methods exist but don’t communicate with a backend yet
+- 🔐 **No auth/users** — everyone is a fake technician with mock avatars
+- 🧷 **No media support** — you can’t attach files, photos, or audio notes
+- 🧪 **Only unit tests** — no E2E tests or visual testing yet
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🔁 Sync Layer (Planned)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+The `sync/` folder will host logic for keeping local and remote data in sync.
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# Clone the repo
+git clone https://github.com/evankazadaiev/solarsync.git
+cd solarsync
+
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev
+
+# Run the tests
+npm run test

@@ -1,4 +1,4 @@
-import { fieldNotesRepo } from '@/features/comments/data/fieldNotesRepository.ts';
+import { fieldNotesRepo } from '@/features/notes/data/fieldNotesRepository.ts';
 import { createFieldNote } from '@/common/domain/fieldNote.ts';
 
 import { useLiveQuery } from 'dexie-react-hooks';

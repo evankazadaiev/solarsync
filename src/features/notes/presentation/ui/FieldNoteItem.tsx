@@ -2,8 +2,8 @@ import type {FieldNote} from '@/common/domain/fieldNote.ts';
 import { Avatar, AvatarFallback } from '@/common/presentation/ui/avatar';
 import { formatDistanceToNow } from 'date-fns';
 import { useState } from 'react';
-import {ReplyControl} from "@/features/comments/presentation/ui/ReplyControl.tsx";
-import {NoteActions} from "@/features/comments/presentation/ui/NoteActions.tsx";
+import {ReplyControl} from "@/features/notes/presentation/ui/ReplyControl.tsx";
+import {NoteActions} from "@/features/notes/presentation/ui/NoteActions.tsx";
 
 type Props = {
     note: FieldNote;

@@ -1,9 +1,9 @@
-import { FieldNoteForm } from "@/features/comments/presentation/ui/FieldNoteForm.tsx";
-import { useFieldNotes } from "@/features/comments/presentation/hooks/useFieldNotes.ts";
-import { FieldNoteList } from "@/features/comments/presentation/ui/FieldNoteList.tsx";
+import { FieldNoteForm } from "@/features/notes/presentation/ui/FieldNoteForm.tsx";
+import { useFieldNotes } from "@/features/notes/presentation/hooks/useFieldNotes.ts";
+import { FieldNoteList } from "@/features/notes/presentation/ui/FieldNoteList.tsx";
 
 import {FileText, Download, MapPin, Cloud, PenLine, FileQuestion} from "lucide-react";
-import {MapPreview} from "@/features/comments/presentation/ui/MapPreview.tsx";
+import {MapPreview} from "@/features/notes/presentation/ui/MapPreview.tsx";
 
 const ReportPage = () => {
     const { notes, addNote, deleteNote, acknowledgeNote } = useFieldNotes();

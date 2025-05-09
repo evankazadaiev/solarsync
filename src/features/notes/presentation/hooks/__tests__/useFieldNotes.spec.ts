@@ -2,13 +2,13 @@ import { renderHook, act } from '@testing-library/react-hooks';
 import { useFieldNotes } from '../useFieldNotes';
 import { vi, describe, it, expect, beforeEach } from 'vitest';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { fieldNotesRepo } from '@/features/comments/data/fieldNotesRepository';
+import { fieldNotesRepo } from '@/features/notes/data/fieldNotesRepository';
 
 vi.mock('dexie-react-hooks', () => ({
     useLiveQuery: vi.fn(),
 }));
 
-vi.mock('@/features/comments/data/fieldNotesRepository', () => ({
+vi.mock('@/features/notes/data/fieldNotesRepository', () => ({
     fieldNotesRepo: {
         getAll: vi.fn(),
         add: vi.fn(),
